@@ -236,7 +236,6 @@ venv/
 
 # Raw data and artifacts
 Datasets/
-combined_dataset.csv
 
 # Python virtual environments
 venv/
