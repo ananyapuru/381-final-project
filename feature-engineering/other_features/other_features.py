@@ -103,12 +103,16 @@ def median_income_enrichment_london(df, income_by_msoa_file_path):
 
 
 # add median individual income for Australia
-# ATO Individuals Table 25
+# ATO Individuals Table 25, 2019-2020
 def median_income_enrichment_aus(df):
     print("Fetching all ZIP-level income data from CSV file (Australia)...")
     aus_income_df = pd.read_csv("australia_postcode_values.csv")
     aus_income_df.rename(columns={"Postcode": "postcode", "Median taxable income or loss": "median_income_tmp"}, inplace=True)
     aus_income_df["postcode"] = aus_income_df["postcode"].astype(str)
+
+    # convert to dollars using May 2020 exchange rate
+    EXCHANGE_RATE = 0.64
+    aus_income_df["median_income_tmp"] = (aus_income_df["median_income_tmp"].astype(float) * EXCHANGE_RATE)
 
     df.loc[df["country"] == "Australia", "postcode"] = df.loc[df["country"] == "Australia", "postcode"]
     return df.merge(aus_income_df[["postcode", "median_income_tmp"]], on="postcode", how="left")
