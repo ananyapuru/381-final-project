@@ -1,10 +1,23 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
+<p align="center">
+  <a href="https://github.com/ananyapuru/381-final-project/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/ananyapuru/381-final-project?style=for-the-badge" alt="Contributors">
+  </a>
+  <a href="https://github.com/ananyapuru/381-final-project/network/members">
+    <img src="https://img.shields.io/github/forks/ananyapuru/381-final-project?style=for-the-badge" alt="Forks">
+  </a>
+  <a href="https://github.com/ananyapuru/381-final-project/stargazers">
+    <img src="https://img.shields.io/github/stars/ananyapuru/381-final-project?style=for-the-badge" alt="Stargazers">
+  </a>
+  <a href="https://github.com/ananyapuru/381-final-project/issues">
+    <img src="https://img.shields.io/github/issues/ananyapuru/381-final-project?style=for-the-badge" alt="Issues">
+  </a>
+  <a href="https://github.com/ananyapuru/381-final-project/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/ananyapuru/381-final-project?style=for-the-badge" alt="License">
+  </a>
+  <a href="https://linkedin.com/in/ananya-purushottam">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+</p>
 
 <!-- PROJECT LOGO -->
 <br />
