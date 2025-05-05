@@ -234,9 +234,6 @@ Desktop.ini
 # Virtual environments
 venv/
 
-# Raw data and artifacts
-Datasets/
-
 # Python virtual environments
 venv/
 .env
