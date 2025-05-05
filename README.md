@@ -143,13 +143,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Top contributors:
-
-<a href="https://github.com/ananyapuru/381-final-project/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ananyapuru/381-final-project" alt="contrib.rocks image" />
-</a>
-
-
 
 <!-- LICENSE -->
 ## License
