@@ -107,7 +107,7 @@ The use of knowledge distillation allows us to train a simpler model for regress
 ## Getting Started
 
 ### Prerequisites
-This project assumes the user has already downloaded `[Python]([url](https://www.python.org/downloads/))` and the `[Pip](https://pip.pypa.io/en/stable/installation/)` package-management system.
+This project assumes the user has already downloaded [Python](https://www.python.org/downloads/) and the [Pip](https://pip.pypa.io/en/stable/installation/) package-management system.
 
 **To Run Sanitization Script `sanitize.py`**
 1. Set up a virtual environment [Optional]
