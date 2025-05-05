@@ -110,7 +110,7 @@ The use of knowledge distillation allows us to train a simpler model for regress
 This project assumes the user has already downloaded [Python](https://www.python.org/downloads/) and the [Pip](https://pip.pypa.io/en/stable/installation/) package-management system.
 
 **To Run Sanitization Script `sanitize.py`**
-1. Set up a virtual environment [Optional]
+1. Set up a virtual environment [Optional]. The setup script `SETUP.sh` sets up a virtual environment and installs all required packages.
 2. Change directory into `Sanitization`
 3. Run `pip install -r requirements.txt` to download all required packages
 4. Run `python3 sanitize.py` to execute the script.
