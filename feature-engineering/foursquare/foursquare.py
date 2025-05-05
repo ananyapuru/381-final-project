@@ -7,7 +7,6 @@ import json
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -30,7 +29,6 @@ class FoursquareClient:
             "Accept": "application/json"
         }
 
-        # Broad category groups based on Foursquare ID ranges
         self.category_groups = {
             'dining_drinking': (13000, 13999),  # All food and drink venues
             'retail_shopping': (17000, 17999),  # All retail and shopping
