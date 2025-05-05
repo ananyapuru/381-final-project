@@ -31,10 +31,6 @@
   <p align="center">
     This project aims to develop a machine learning model(s) that accurately predicts house sale prices based on a variety of features regarding the property (such as lot area and interior/exterior design), its surrounding area, and its sale information.
     <br />
-<!--     <a href="https://github.com/ananyapuru/381-final-project/"><strong>Explore the docs »</strong></a>
-    &middot;
-    &middot; -->
-    <a href="mailto:ananya.purushottam@yale.edu">Contact Us</a>
   </p>
 </div>
 
