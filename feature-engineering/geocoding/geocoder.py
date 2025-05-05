@@ -1,6 +1,5 @@
 # geocoder.py
 import logging
-from datetime import time
 from tenacity import retry, stop_after_attempt, wait_exponential
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
@@ -13,7 +12,6 @@ Creates a new CSV file and outputs the modified dataset in geocoded_dataset.csv
 
 OUTPUT_FILENAME = 'geocoded_dataset.csv'
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -51,7 +49,7 @@ class RobustPostcodeGeocoder:
             return (None, None)
         except Exception as e:
             logger.error(f"Geocoding attempt failed for {postcode}, {country}: {str(e)}")
-            raise  # Re-raise for tenacity retry
+            raise
 
     def _find_nearby_postcodes(self, postcode, country):
         """Fallback postcode generator with country-specific logic."""
@@ -71,7 +69,7 @@ class RobustPostcodeGeocoder:
         if country != 'UK':
             postcode = int(float(postcode))
         """Robust geocoding with cascading fallbacks."""
-        # Attempt 1: Exact geocode
+        # first try exact geocode
         try:
             exact_coords = self._geocode_single(postcode, country)
             if exact_coords != (None, None):
@@ -79,7 +77,7 @@ class RobustPostcodeGeocoder:
         except Exception as e:
             logger.warning(f"Primary geocoding failed for {postcode}, {country}. Attempting fallbacks...")
 
-        # Attempt 2: Nearby postcodes
+        # then try nearby postcodes
         for fallback_postcode in self._find_nearby_postcodes(postcode, country):
             try:
                 fallback_coords = self._geocode_single(fallback_postcode, country)
@@ -90,7 +88,7 @@ class RobustPostcodeGeocoder:
                 logger.error(f"Fallback failed for {fallback_postcode}: {str(e)}")
                 continue
 
-        # Final fallback: Approximate centroid (last resort)
+        # Lastly Approximate centroid
         try:
             country_coords = {
                 "UK": (54.0, -2.5),
@@ -122,8 +120,6 @@ class RobustPostcodeGeocoder:
         logger.info(f"Completed. Failed rows: {len(failed_indices)}/{len(df)}")
         return pd.DataFrame(results), failed_indices
 
-
-# Example Usage
 if __name__ == "__main__":
     geocoder = RobustPostcodeGeocoder(max_retries=3)
     df = pd.read_csv('original_dataset.csv', dtype=str)
