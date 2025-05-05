@@ -151,10 +151,10 @@ Distributed under the [MIT License](https://opensource.org/license/mit)
 
 <!-- CONTACT -->
 ## Contact
-- Ananya Purushottam -- ananya.purushottam@yale.edu
-- Helen Zhou -- helen.zhou@yale.edu
-- Ian Lim -- ian.lim@yale.edu
-- Nevin Tan - nevin.tan@yale.edu
+- Ananya Purushottam -- ananya.purushottam [at] yale [dot] edu
+- Helen Zhou -- helen.zhou [at] yale [dot] edu
+- Ian Lim -- ian.lim [at] yale [dot] edu
+- Nevin Tan - nevin.tan [at] yale [dot] edu
 
 Project Link: [https://github.com/ananyapuru/381-final-project](https://github.com/ananyapuru/381-final-project)
 
